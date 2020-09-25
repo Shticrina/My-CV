@@ -4,105 +4,283 @@ body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 200;
+	background-color: #777;
 }
 
 ul {
-	list-style-type: square;
+	list-style-type: none;
+	margin: 0;
 }
 
 a {
 	text-decoration: none;
 }
 
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+input {
+	border: none;
+}
+
+.padding-0 {
+	padding: 0!important;
+}
+
+.margin-0 {
+	margin: 0!important;
+}
+
+
+/*********** Colors ***********/
+
+.bg-purple {
+	background-color: #8b7297;
+}
+
+.text-purple {
+	color: #8b7297;
+}
+
+.text-coral {
+	color: #fc7e50;
+}
+
+.text-darkgray {
+	color: #666;
+}
+
+.text-gray {
+	color: #aaa;
+}
+
+.text-black {
+	color: #141414;
+}
+
+
+/*********** Font sizes & align ***********/
+.text-12 {
+	font-size: 12px;
+}
+
+.text-13 {
+	font-size: 13px;
+}
+
+.text-14 {
+	font-size: 14px;
+}
+
+.text-16 {
+	font-size: 16px;
+}
+
+.text-18 {
+	font-size: 18px;
+}
+
+.text-right {
+	text-align: end;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/*********** Buttons ***********/
+.button {
+	text-decoration: none;
+	background-color: #eee;
+	color: #fff;
+	border: none;
+	padding: 12px 30px;
+	margin-right: 30px;
+	font-size: 13px;
+	/*border-radius: 4px;*/
+}
+
+.button-primary {
+	background-color: #e0e0e0;
+	color: #141414;
+}
+
+.button-info {
+	background-color: #539987;
+}
+
+.button-complete {
+	background-color: #7a2ca2;
+}
+
+.button-secondary {
+	background-color: #757575;
+}
+/***************************************************************/
+
 #grid-container {
-	background-color: #c33;
 	display: grid;
-	height: 100vh;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: .2fr 3.5fr 3.5fr 3.5fr 3.5fr 2fr 2fr 1fr;
-	grid-column-gap: 4rem;
-	grid-row-gap: 2rem;
+	/*height: 100vh;*/
+	grid-template-columns: 1fr 2.2fr;
+	grid-template-rows: .2fr;
+	/*grid-column-gap: 4rem;*/
+	/*grid-row-gap: 2rem;*/
 	padding: 50px;
 	grid-template-areas: 
-		/*"nav nav"*/
 		"header header"
+		"photo name"
 		"content1 content2"
 		"content3 content4"
-		"content5 content6"
-		"footer footer";
+		"content5 content6";
+}
+
+.content-item {
+	padding: 70px;
+	font-size: 30px;
+	text-align: center;
 }
 
 /*Navigation*/
-nav#navbar {
-	background-color: #eee;
-	margin: 0;
-	padding: 0;
-	grid-area: nav;
+#navbar {
+	background-color: #493155;
+	height: 3.5rem;
 }
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    margin:0 ;
+    height: 35px;
+    padding: 0;
+     
+}
+#navbar ul li {
+    /*width: 100%;*/
+    /*cursor: pointer;*/
+    padding: 7px 15px;
+    /*transition: .5s;*/
+    list-style-type: none;
+    height: 100%;
+    /*text-align: center;*/
+    padding-top: 40px;
+}   
+
+#navbar ul li a {
+    color:#3ee;
+    text-transform: uppercase;
+}
+
+#navbar ul li:hover a {
+    color:#fff;
+}
+
 
 /* Header */
 header {
-	background-color: #0d7b67;
+	background-color: #493155;
 	grid-area: header;
+	text-align: center;
 	/*padding: 20px;
 	text-align: center;
 	font-size: 35px;
 	color: white;*/
 }
 
+#photo {
+	background-color: #ddd;
+	grid-area: photo;
+}
+
+#photo img {
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid #8b7297;
+}
+
+#name {
+	background-color: #fff;
+	grid-area: name;
+	text-align: left;
+}
+
+#name h4 {
+	font-size: 26px;
+}
+
+.underline {
+    width: 5rem;
+    height: 5px;
+    background: #7a2ca2;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
 #content1 {
+	background-color: #ddd;
 	grid-area: content1;
 }
 
 #content2 {
+	background-color: #fff;
 	grid-area: content2;
 }
 
 #content3 {
+	background-color: #ddd;
 	grid-area: content3;
 }
 
 #content4 {
+	background-color: #fff;
 	grid-area: content4;
 }
 
 #content5 {
+	background-color: #ddd;
 	grid-area: content5;
 }
 
 #content6 {
+	background-color: #fff;
 	grid-area: content6;
 }
 
-.content-item {
-	background-color: rgba(255, 255, 255, 0.8);
-	padding: 20px;
-	font-size: 30px;
-	text-align: center;
-}
-
-
-
 /*Footer*/
 footer {
-	background-color: #3c3;
-	grid-area: footer;
+	background-color: #493155;
+	padding: 40px;
+	text-align: center;
+	color: #fff;
+}
+
+footer ul li {
+	/*color: #fff;*/
+}
+
+footer ul li a {
+	color: #fff;
 }
 
 /*Responsive*/
 @media only screen and (max-width: 550px) {
 	#grid-container {
 		grid-template-columns: 1fr;
-		grid-template-rows: .2fr 5fr 5fr 5fr 5fr 8fr 8fr 1fr;
+		grid-template-rows: .2fr .2fr .2fr 5fr 5fr 5fr 5fr 8fr 8fr 1fr;
 		grid-template-areas: 
-			/*"nav"*/
 			"header"
+			"photo"
+			"name"
 			"content1"
 			"content2"
 			"content3"
 			"content4"
 			"content5"
-			"content6"
-			"footer";
+			"content6";
 	}
 }
