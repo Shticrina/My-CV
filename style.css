@@ -16,9 +16,10 @@ a {
 	text-decoration: none;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	font-weight: 200;
+	margin: 0;
 }
 
 input {
@@ -122,6 +123,40 @@ input {
 .button-secondary {
 	background-color: #757575;
 }
+
+.underline {
+    width: 5rem;
+    height: 5px;
+    background: #7a2ca2;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 85%;
+    height: 1.5px;
+    background: #7a2ca2;
+    display: inline-block;
+    /*margin-bottom: 10px;*/
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.job-title {
+	text-transform: uppercase;
+	/*font-style: italic;*/
+	font-weight: 600;
+}
+
+.item {
+	margin-bottom: 20px;
+}
+
+.item p {
+	margin: 0;
+}
 /***************************************************************/
 
 #grid-container {
@@ -141,9 +176,18 @@ input {
 }
 
 .content-item {
-	padding: 70px;
+	padding: 40px 70px;
 	font-size: 30px;
-	text-align: center;
+	/*text-align: center;*/
+}
+
+.content-item h5 {
+	margin-bottom: -20px;
+}
+
+.company {
+	/*font-style: italic;*/
+	/*font-weight: bold;*/
 }
 
 /*Navigation*/
@@ -172,7 +216,7 @@ input {
 }   
 
 #navbar ul li a {
-    color:#3ee;
+    color:#fff;
     text-transform: uppercase;
 }
 
@@ -180,14 +224,12 @@ input {
     color:#fff;
 }
 
-
 /* Header */
 header {
 	background-color: #493155;
 	grid-area: header;
 	text-align: center;
 	/*padding: 20px;
-	text-align: center;
 	font-size: 35px;
 	color: white;*/
 }
@@ -211,14 +253,6 @@ header {
 
 #name h4 {
 	font-size: 26px;
-}
-
-.underline {
-    width: 5rem;
-    height: 5px;
-    background: #7a2ca2;
-    display: inline-block;
-    margin-bottom: 10px;
 }
 
 #content1 {
@@ -255,7 +289,7 @@ header {
 footer {
 	background-color: #493155;
 	padding: 40px;
-	text-align: center;
+	/*text-align: center;*/
 	color: #fff;
 }
 
