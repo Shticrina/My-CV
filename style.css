@@ -10,6 +10,7 @@ body {
 ul {
 	list-style-type: none;
 	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -42,11 +43,15 @@ input {
 }
 
 .text-purple {
-	color: #8b7297;
+	color: #7a2ca2;
 }
 
 .text-coral {
 	color: #fc7e50;
+}
+
+.text-brown {
+	color: #a52a2a;
 }
 
 .text-darkgray {
@@ -129,7 +134,7 @@ input {
     height: 5px;
     background: #7a2ca2;
     display: inline-block;
-    margin-bottom: 10px;
+    margin: 20px 0;
 }
 
 .line {
@@ -137,7 +142,7 @@ input {
     height: 1.5px;
     background: #7a2ca2;
     display: inline-block;
-    /*margin-bottom: 10px;*/
+    margin-bottom: 10px;
 }
 
 .uppercase {
@@ -162,25 +167,25 @@ input {
 #grid-container {
 	display: grid;
 	/*height: 100vh;*/
-	grid-template-columns: 1fr 2.2fr;
+	grid-template-columns: 1fr 1.8fr;
 	grid-template-rows: .2fr;
-	padding: 50px;
+	/*padding: 50px;*/
 	grid-template-areas: 
 		"header header"
 		"photo name"
 		"contact experience"
+		"interests experience"
 		"skills education"
-		"languages interests";
+		"languages personal";
 }
 
 .content-item {
-	padding: 40px 70px;
-	font-size: 30px;
-	/*text-align: center;*/
+	padding: 25px 70px;
+	font-size: 15px;
 }
 
 .content-item h5 {
-	margin-bottom: -20px;
+	font-size: 30px;
 }
 
 .company {
@@ -210,7 +215,7 @@ input {
     list-style-type: none;
     height: 100%;
     /*text-align: center;*/
-    padding-top: 40px;
+    /*padding-top: 40px;*/
 }   
 
 #navbar ul li a {
@@ -238,15 +243,19 @@ header {
 }
 
 #photo img {
-	width: 100%;
+	width: 90%;
 	border-radius: 50%;
-	border: 3px solid #8b7297;
+	border: 3px solid #7a2ca2;
 }
 
 #name {
 	background-color: #fff;
 	grid-area: name;
 	text-align: left;
+}
+
+#name h2 {
+	font-size: 50px;
 }
 
 #name h4 {
@@ -256,6 +265,20 @@ header {
 #contact {
 	background-color: #ddd;
 	grid-area: contact;
+}
+
+#contact ul li {
+	padding: 5px 0;
+	font-weight: 400;
+}
+
+#contact ul li i {
+	font-size: 1.5em;
+	padding-right: 10px;
+}
+
+#contact ul li:last-child i {
+	font-size: 1.9em;
 }
 
 #experience {
@@ -279,8 +302,13 @@ header {
 }
 
 #interests {
-	background-color: #fff;
+	background-color: #ddd;
 	grid-area: interests;
+}
+
+#personal {
+	background-color: #fff;
+	grid-area: personal;
 }
 
 /*Footer*/
@@ -309,16 +337,17 @@ footer ul li a {
 			"header"
 			"photo"
 			"name"
-			"skills"
 			"experience"
+			"skills"
 			"education"
 			"languages"
+			"personal"
 			"interests"
 			"contact";
 	}
 		
 	.content-item {
-		padding: 20px 35px;
+		padding: 40px 35px;
 	}
 
 	#photo .block-img {
