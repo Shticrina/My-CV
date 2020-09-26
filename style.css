@@ -35,6 +35,13 @@ input {
 	margin: 0!important;
 }
 
+.margin-top-10 {
+	margin-top: 10px!important;
+}
+
+.margin-top-30 {
+	margin-top: 30px!important;
+}
 
 /*********** Colors ***********/
 
@@ -289,6 +296,74 @@ header {
 #skills {
 	background-color: #ddd;
 	grid-area: skills;
+}
+
+#skills .slidecontainer {
+	font-weight: 600;
+}
+
+#skills .slidecontainer .subtitle {
+	font-size: 16;
+	font-weight: 200;
+    text-transform: uppercase;
+}
+
+#skills .slidecontainer p {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+#skills .slidecontainer input {
+	width: 100%;
+}
+
+#skills .slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #8b7297;
+	outline: none;
+	/*opacity: 0.7;*/
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+#skills .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	background: #fc7e50;
+}
+
+#skills .slider::-moz-range-thumb {
+	width: 15px;
+	height: 15px;
+	background: #fc7e50;
+}
+
+#frameworks .slider {
+	background: #a99ab0;
+}
+
+#frameworks .slider::-webkit-slider-thumb {
+	background: #a74a4a;
+}
+
+#frameworks .slider::-moz-range-thumb {
+	background: #a74a4a;
+}
+
+#graphics .slider {
+	background: #bbb;
+}
+
+#graphics .slider::-webkit-slider-thumb {
+	background: #7a2ca2;
+}
+
+#graphics .slider::-moz-range-thumb {
+	background: #8b7297;
 }
 
 #education {
