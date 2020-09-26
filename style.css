@@ -164,15 +164,13 @@ input {
 	/*height: 100vh;*/
 	grid-template-columns: 1fr 2.2fr;
 	grid-template-rows: .2fr;
-	/*grid-column-gap: 4rem;*/
-	/*grid-row-gap: 2rem;*/
 	padding: 50px;
 	grid-template-areas: 
 		"header header"
 		"photo name"
-		"content1 content2"
-		"content3 content4"
-		"content5 content6";
+		"contact experience"
+		"skills education"
+		"languages interests";
 }
 
 .content-item {
@@ -255,34 +253,34 @@ header {
 	font-size: 26px;
 }
 
-#content1 {
+#contact {
 	background-color: #ddd;
-	grid-area: content1;
+	grid-area: contact;
 }
 
-#content2 {
+#experience {
 	background-color: #fff;
-	grid-area: content2;
+	grid-area: experience;
 }
 
-#content3 {
+#skills {
 	background-color: #ddd;
-	grid-area: content3;
+	grid-area: skills;
 }
 
-#content4 {
+#education {
 	background-color: #fff;
-	grid-area: content4;
+	grid-area: education;
 }
 
-#content5 {
+#languages {
 	background-color: #ddd;
-	grid-area: content5;
+	grid-area: languages;
 }
 
-#content6 {
+#interests {
 	background-color: #fff;
-	grid-area: content6;
+	grid-area: interests;
 }
 
 /*Footer*/
@@ -305,16 +303,26 @@ footer ul li a {
 @media only screen and (max-width: 550px) {
 	#grid-container {
 		grid-template-columns: 1fr;
-		grid-template-rows: .2fr .2fr .2fr 5fr 5fr 5fr 5fr 8fr 8fr 1fr;
+		grid-template-rows: .2fr;
+		padding: 0;
 		grid-template-areas: 
 			"header"
 			"photo"
 			"name"
-			"content1"
-			"content2"
-			"content3"
-			"content4"
-			"content5"
-			"content6";
+			"skills"
+			"experience"
+			"education"
+			"languages"
+			"interests"
+			"contact";
+	}
+		
+	.content-item {
+		padding: 20px 35px;
+	}
+
+	#photo .block-img {
+		width: 80%;
+    	margin: auto;
 	}
 }
