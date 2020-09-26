@@ -189,7 +189,7 @@ input {
 .content-item {
 	padding: 25px 70px;
 	font-size: 15px;
-	border: 1px solid green; 
+	/*border: 1px solid green; */
 }
 
 .content-item h5 {
